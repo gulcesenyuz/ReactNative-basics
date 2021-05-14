@@ -1,36 +1,49 @@
 import React from 'react';
-import { Button, TextInput, StyleSheet, Text, View } from 'react-native';
-
-// useState-> State Hooks - StatefullWidget
-//const [outputText, setOutputText] = useState('Open up App.js to start working on the project')
-
+import { Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.inputBox}>
-        <TextInput placeholder="New Goal" style={styles.inputText} />
-        <Button title="ADD" />
+    <View
+      style={{
+        padding: 30,
+        flexDirection: 'column',
+        width: '100%',
+        height: '100%',
+        justifyContent: 'space-around',
+        alignItems: 'stretch',
+      }}
+    >
+      <View
+        style={{
+          backgroundColor: 'red',
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <Text>1</Text>
       </View>
-      <View>
+      <View
+        style={{
+          backgroundColor: 'blue',
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <Text>2</Text>
+      </View>
+      <View
+        style={{
+          backgroundColor: 'green',
+          flex: 1,
 
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <Text>3</Text>
       </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    padding: 60
-  },
-  inputText: {
-    flex: 1,
-    height: 50,
-    borderColor: 'black',
-    borderWidth: 1,
-    width: '80%'
-  },
-  inputBox: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }
-});
